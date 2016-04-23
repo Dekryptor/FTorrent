@@ -199,7 +199,7 @@ namespace FTorrent
                 BEncodedDictionary fastResume = new BEncodedDictionary();
                 for (int i = 0; i < torrentFiles.Count; i++)
                 {
-                    if (torrentFiles[i].downloadProgress > 1)
+                    if (torrentFiles[i].downloadProgress > 0)
                     {
                         torrentFiles[i].Stop();
                         while (torrentFiles[i].torrentState != TorrentState.Stopped)
